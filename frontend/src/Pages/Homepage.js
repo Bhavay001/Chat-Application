@@ -14,6 +14,7 @@ import Login from "../components/Authentication/Login";
 import SignUp from "../components/Authentication/SignUp";
 
 const Homepage = () => {
+  // it is used for navigate
   const history = useHistory();
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo"));
