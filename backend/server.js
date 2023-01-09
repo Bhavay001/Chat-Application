@@ -53,7 +53,7 @@ const server = app.listen(PORT, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: `${process.env.FRONTEND_URL}`,
   },
 });
 // io.on will listen to everyone make a socket instance for bhavay,yuvraj,tushar
