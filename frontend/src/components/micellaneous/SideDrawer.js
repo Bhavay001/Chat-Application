@@ -74,7 +74,7 @@ const SideDrawer = () => {
       };
       // we need to give query
       const { data } = await axios.get(
-        `http://localhost:5000/api/user?search=${search}`,
+        `${process.env.REACT_APP_BASE_URL}/api/user?search=${search}`,
         config
       );
       setLoading(false);
@@ -102,7 +102,7 @@ const SideDrawer = () => {
       };
       // creating new chat
       const { data } = await axios.post(
-        "http://localhost:5000/api/chat",
+        `${process.env.REACT_APP_BASE_URL}/api/chat`,
         { userId },
         config
       );
